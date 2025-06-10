@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosso Amor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="hearts.js"></script>
+<body>
+  <div class="container" id="inicio">
+    <button id="startButton">
+      <span class="heart">❤️</span> CLICK
+    </button>
+  </div>
+
+  <div class="main-content hidden" id="conteudo">
+    <div class="spotify-bar">
+      <p>🎵 Te assumi pro Brasil</p>
+      <audio id="bgMusic" loop>
+        <source src="img/te_assumi.mp3" type="audio/mpeg" />
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+
+    <div class="carousel">
+      <img src="img/foto1.jpeg" class="slide" style="display:block;">
+      <img src="img/foto2.jpeg" class="slide">
+      <img src="img/foto3.jpeg" class="slide">
+    </div>
+
+    <div class="timer" id="tempoJuntos">
+      <p>Estamos juntos há:</p>
+      <p id="contador">00 dias 00:00:00</p>
+    </div>
+
+    <hr>
+
+    <p class="mensagem">
+      Desde o instante em que nossos caminhos se cruzaram, minha vida ganhou mais cor, mais sentido, mais amor. 
+      Cada segundo ao seu lado é um presente que a vida me deu, e se eu pudesse, pararia o tempo só para viver pra sempre nesse nosso instante. 
+      Obrigado por ser meu lar, minha paz e o meu amor. Te amo infinitamente! ❤️
+    </p>
+  </div>
+
+  <script>
+    // Mostrar conteúdo e iniciar música
+    document.getElementById("startButton").addEventListener("click", function() {
+      document.getElementById("inicio").classList.add("hidden");
+      document.getElementById("conteudo").classList.remove("hidden");
+
+      const audio = document.getElementById("bgMusic");
+      audio.play();
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
