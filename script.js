@@ -21,9 +21,9 @@ function iniciarContador() {
     const segundos = Math.floor((diff / 1000) % 60);
 
     document.getElementById("contador").textContent =
-      ${dias} dias ${horas.toString().padStart(2, "0")} +
-      ${minutos.toString().padStart(2, "0")}; +
-      ${segundos.toString().padStart(2, "0")};
+      `${dias} dias ${horas.toString().padStart(2, "0")}:${minutos
+        .toString()
+        .padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
   }, 1000);
 }
 
@@ -42,7 +42,7 @@ function criarCoracao() {
   const heart = document.createElement("div");
   heart.classList.add("heart-fall");
   heart.textContent = "❤️";
-  heart.style.left = ${Math.random() * 100}vw;
+  heart.style.left = `${Math.random() * 100}vw`;
   document.body.appendChild(heart);
 
   setTimeout(() => {
